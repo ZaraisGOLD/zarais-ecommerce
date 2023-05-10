@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Amaranth', sans-serif;
+  scroll-behavior: smooth;
+}
+
+html ::-webkit-scrollbar {
+  width: 7px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background-color: #346fdd;
+  border-radius: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+input {
+  outline: none;
+  font-family: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+select {
+  /* appearance: none; */
+  font-family: inherit;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
