@@ -7,6 +7,11 @@
   --colorwhiteText: #ffffff;
   --text-gray: #c7c7c7;
   --text-dark-gray: #868484;
+  --colorScroll: #f85555;
+  --colorBorderCardProduct: #f8555580;
+  --heightHeader: 6em;
+  --bgPrimary: radial-gradient(circle, rgba(255, 243, 243, 1) 0%, rgba(255, 243, 243, 1) 100%);
+  --bgWhite: #f6f6f6;
 }
 
 *,
@@ -25,7 +30,7 @@ html ::-webkit-scrollbar {
 }
 
 html ::-webkit-scrollbar-thumb {
-  background-color: #346fdd;
+  background-color: var(--colorScroll);
   border-radius: 20px;
 }
 
@@ -34,7 +39,7 @@ body {
   /* es bueno por si llega a ser mas pequeño no falle nada */
   min-height: 100vh;
   /* si solo le agregas el color de fondo al app entonces se nota cuando carga por pprimera vez, es mejor al body o al html */
-  background: linear-gradient(90deg, rgba(239,249,255,0.8) 0%, rgba(239,249,255,0.8) 100%);
+  background: var(--bgPrimary);
 }
 
 h1,
@@ -74,7 +79,7 @@ button {
   font-family: inherit;
   cursor: pointer;
   /* prueba si te gusta sin borde */
-  border: none ;
+  border: none;
 }
 
 select {

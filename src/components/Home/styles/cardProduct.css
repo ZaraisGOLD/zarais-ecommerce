@@ -1,12 +1,7 @@
-:root {
-  /* no entendi que quieres hacer con este root aqui, va en el index */
-  --color_first: rgb(52, 111, 221, 50%);
-}
-
 .product {
   width: 100%;
   max-width: 300px;
-  border: 1px solid var(--color_first);
+  border: 1px solid var(--colorBorderCardProduct);
   background-color: white;
   transition: transform 250ms ease;
   border-radius: 0.8em;
@@ -17,7 +12,7 @@
 }
 
 .product__header {
-  border-bottom: 1px solid var(--color_first);
+  border-bottom: 1px solid var(--colorBorderCardProduct);
   padding: 1.3em;
   width: 100%;
   aspect-ratio: 1.5;
