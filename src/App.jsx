@@ -20,8 +20,7 @@ function App() {
   }, [])
 
   return (
-    <>
-      <div>
+      <div className='ecommerce'>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -32,7 +31,6 @@ function App() {
           <Route path='/purchases' element={<Purchases />}/>
         </Routes>
       </div>
-    </>
   )
 }
 

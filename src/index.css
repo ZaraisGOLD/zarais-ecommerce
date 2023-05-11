@@ -40,6 +40,12 @@ ul {
   padding-left: 0;
 }
 
+li,
+a {
+  text-decoration: none;
+  /* color: inherit; */
+}
+
 input {
   outline: none;
   font-family: inherit;
@@ -50,7 +56,7 @@ button {
 }
 
 select {
-  /* appearance: none; */
+  appearance: none;
   font-family: inherit;
 }
 

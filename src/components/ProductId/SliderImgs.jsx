@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styles/sliderImgs.css'
 
 const SliderImgs = ({ product }) => {
@@ -11,7 +11,7 @@ const SliderImgs = ({ product }) => {
 
   const handlePrev = () => {
     if (numberImg - 1 < 0) {
-      // setNumberImg(2) para que sea un ciclo infinito
+      // setNumberImg(2)
     } else {
       setNumberImg(numberImg - 1)
     }
@@ -19,7 +19,7 @@ const SliderImgs = ({ product }) => {
 
   const handleNext = () => {
     if (numberImg + 1 > 2) {
-      // setNumberImg(2) para que sea un ciclo infinito
+      // setNumberImg(0)
     } else {
       setNumberImg(numberImg + 1)
     }

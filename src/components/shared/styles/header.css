@@ -1,0 +1,34 @@
+.header {
+
+}
+
+.header__home {
+  color: red;
+}
+
+.header__home,
+.navbar__login,
+.navbar__register,
+.navbar__purchases,
+.navbar__cart {
+  cursor: pointer;
+}
+
+.header__home:link,
+.header__home:visited {
+  /* color: b; */
+}
+
+.navbar {}
+
+.navbar__list {
+
+}
+
+.navbar__login {}
+
+.navbar__register {}
+
+.navbar__purchases {}
+
+.navbar__cart {}

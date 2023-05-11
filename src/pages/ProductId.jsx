@@ -15,9 +15,8 @@ const ProductId = () => {
 
   useEffect(() => {
     getProductById()
-  }, [])
+  }, [id])
 
-  console.log(product);
 
   return (
     <div>

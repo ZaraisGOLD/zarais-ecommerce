@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './styles/header.css'
 
 const Header = () => {
   return (
-    <header>
-      <h1><Link to='/'>e-commerce</Link></h1>
-      <nav>
+    <header className='header'>
+      <h1><Link className='header__home' to='/'>e-commerce</Link></h1>
+      <nav className='navbar'>
         <ul>
-          <li><Link to='/login'>Login</Link></li>
-          <li><Link to='/register'>Register</Link></li>
-          <li><Link to='/purchases'>Purchases</Link></li>
-          <li><Link to='/cart'>Cart</Link></li>
+          <li className='navbar__list'><Link className='navbar__login' to='/login'>Login</Link></li>
+          <li className='navbar__list'><Link className='navbar__register' to='/register'>Register</Link></li>
+          <li className='navbar__list'><Link className='navbar__purchases' to='/purchases'>Purchases</Link></li>
+          <li className='navbar__list'><Link className='navbar__cart' to='/cart'>Cart</Link></li>
         </ul>
       </nav>
     </header>
