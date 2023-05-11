@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import './styles/filterPrice.css'
 
 const FilterPrice = ({ setFromTo }) => {
 
@@ -14,18 +15,19 @@ const FilterPrice = ({ setFromTo }) => {
   }
 
   return (
-    <article>
-      <h3>Price</h3>
-      <form onSubmit={handleSubmit(submit)} >
-        <div>
-          <label htmlFor="from">From</label>
-          <input {...register('from')} type="number" id='from' />
+    <article className='FilterPrice__content'>
+      <h3 className='filterPrice__title'>Price</h3>
+      <hr />
+      <form className='filterPrice__form' onSubmit={handleSubmit(submit)} >
+        <div className='form__input--from'>
+          <label className='input__label' htmlFor="from">From</label>
+          <input className='input__value' {...register('from')} type="number" id='from' placeholder='example: 9.999' />
         </div>
-        <div>
-          <label htmlFor="to">To</label>
-          <input {...register('to')} type="number" id='to' />
+        <div className='form__input--to'>
+          <label className='input__label' htmlFor="to">To</label>
+          <input className='input__value' {...register('to')} type="number" id='to' placeholder='example: 9.999' />
         </div>
-        <button>Filter Price</button>
+        <button className='firterPrice__form--btn'>Filter Price</button>
       </form>
     </article>
   )

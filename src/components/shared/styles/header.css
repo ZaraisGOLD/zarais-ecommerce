@@ -3,7 +3,7 @@
 }
 
 .header__home {
-  color: red;
+  color: var(--colorPrimary);
 }
 
 .header__home,

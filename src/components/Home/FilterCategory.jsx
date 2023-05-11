@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import useFetch from '../../hooks/useFetch'
 import { getAllProductsThunk } from '../../store/slices/products-slice'
 import { useDispatch } from 'react-redux'
+import './styles/filterCategory.css'
 
 const FilterCategory = () => {
 
@@ -25,18 +26,21 @@ const FilterCategory = () => {
   }
 
   return (
-    <article>
-      <h3>Category</h3>
-      <ul>
-        <li onClick={handleAllProducts} >All products</li>
-        {
-          categories?.map(category => (
-            <li onClick={() => handleCategories(category.id)} key={category.id}>
-              {category.name}
-            </li>
-          ))
-        }
-      </ul>
+    <article className='filterCategory__content'>
+      <h3 className='filterCategory__title'>Category</h3>
+      <hr />
+      <section className='filterCategory__list--content'>
+        <ul className='filterCategory__list'>
+          <li className='list__allProducts' onClick={handleAllProducts} >All products</li>
+          {
+            categories?.map(category => (
+              <li className='list__options' onClick={() => handleCategories(category.id)} key={category.id}>
+                {category.name}
+              </li>
+            ))
+          }
+        </ul>
+      </section>
     </article>
   )
 }

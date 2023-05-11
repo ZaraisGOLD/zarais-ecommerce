@@ -28,32 +28,40 @@ const Home = () => {
       const from = +fromTo.from
       const to = +fromTo.to
       const price = +prod.price
-
       if (from && to) {
         return from <= price && price <= to
-      } 
-
+      }
       if (from && !to) {
         return from <= price
       }
-
       if (!from && to) {
         return to >= price
       }
-
       if (!from && !to) {
         true
       }
     })
 
   return (
-    <div className='home'>
-      <input ref={input} onChange={handleChangeInput} type="text" />
-      <FilterCategory />
-      <FilterPrice
-        setFromTo={setFromTo}
-      />
-      <div>
+    <section className='home'>
+      <form className='home__form'>
+        <input className='form__input' ref={input} onChange={handleChangeInput} type="text" placeholder='What are you looking for?' />
+        <button className='form__btn' ><i className='bx bx-search'></i></button>
+      </form>
+      <button className='home__filter--btn'>
+        <i className='bx bx-filter-alt' ></i>
+        <span className='filter__btn--text'>Filter products</span>
+      </button>
+      <section className='home__filters--Container'>
+        <button className='filters__btn--closed'>
+          <i className='bx bx-x btn__closed--icon'></i>
+        </button>
+        <FilterCategory />
+        <FilterPrice
+          setFromTo={setFromTo}
+        />
+      </section>
+      <section className='home__cardProduct--container'>
         {
           productFilter?.map(prod => (
             <CardProduct
@@ -62,8 +70,8 @@ const Home = () => {
             />
           ))
         }
-      </div>
-    </div>
+      </section>
+    </section>
   )
 }
 

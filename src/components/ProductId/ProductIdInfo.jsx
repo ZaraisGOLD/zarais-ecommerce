@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import useCrudCart from '../../hooks/useCrudCart'
+import './styles/productIdInfo.css'
 
 const ProductIdInfo = ({ product }) => {
 
@@ -24,7 +25,7 @@ const ProductIdInfo = ({ product }) => {
   }
 
   return (
-    <section>
+    <section className='productIdInfo__content'>
       <h3>{product?.brand}</h3>
       <h2>{product?.title}</h2>
       <p>{product?.description}</p>
