@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 
+:root {
+  /* ajusta los colores como te guste */
+  --colorPrimary: #f85555;
+  --colorBtnText: #ffffff;
+  --colorwhiteText: #ffffff;
+  --text-gray: #c7c7c7;
+  --text-dark-gray: #868484;
+}
+
 *,
 *::before,
 *::after {
@@ -22,6 +31,10 @@ html ::-webkit-scrollbar-thumb {
 
 body {
   margin: 0;
+  /* es bueno por si llega a ser mas pequeño no falle nada */
+  min-height: 100vh;
+  /* si solo le agregas el color de fondo al app entonces se nota cuando carga por pprimera vez, es mejor al body o al html */
+  background: linear-gradient(90deg, rgba(239,249,255,0.8) 0%, rgba(239,249,255,0.8) 100%);
 }
 
 h1,
@@ -43,16 +56,25 @@ ul {
 li,
 a {
   text-decoration: none;
-  /* color: inherit; */
+  color: inherit;
+  display: block;
 }
 
 input {
   outline: none;
   font-family: inherit;
+  /* un reinicio para poder darle estilos propios */
+  display: block;
+  color: var(--text-gray);
+  appearance: none;
+  border: 1px solid currentColor;
 }
 
 button {
   font-family: inherit;
+  cursor: pointer;
+  /* prueba si te gusta sin borde */
+  border: none ;
 }
 
 select {
@@ -67,4 +89,20 @@ select::-ms-expand {
 img {
   width: 100%;
   display: block;
+  /* ajustar todas las imagenes para no sufrir tanto */
+  object-fit: cover;
+  object-position: center, center;
+}
+
+i {
+  /* un tamaño para todos los iconos  */
+  display: block;
+  font-size: 20px;
+}
+
+hr {
+  /* para evitar errores con los hr */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }

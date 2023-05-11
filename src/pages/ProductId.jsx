@@ -4,6 +4,7 @@ import useFetch from '../hooks/useFetch'
 import ProductIdInfo from '../components/ProductId/ProductIdInfo'
 import SliderImgs from '../components/ProductId/SliderImgs'
 import SimilarProduct from '../components/ProductId/SimilarProduct'
+import './styles/productId.css'
 
 const ProductId = () => {
 
@@ -19,11 +20,13 @@ const ProductId = () => {
 
 
   return (
-    <div>
-      <SliderImgs product={product} />
-      <ProductIdInfo product={product} />
+    <article className='productId__container'>
+      <div className='productId__content'>
+        <SliderImgs product={product} />
+        <ProductIdInfo product={product} />
+      </div>
       <SimilarProduct product={product} />
-    </div>
+    </article>
   )
 }
 

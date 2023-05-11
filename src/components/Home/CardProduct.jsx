@@ -15,31 +15,29 @@ const CardProduct = ({ product }) => {
 
   const handleBtnClick = e => {
     e.stopPropagation()
-
     const data = {
       quantity: 1,
       productId: product.id
     }
-
     createProducttoCart(data)
   }
 
   return (
-    <article onClick={handleSelectProduct} className='product'>
-      <header className='product__header'>
-        <img className='product__img pI1' src={product.images[0].url} alt="" />
-        <img className='product__img pI2' src={product.images[1].url} alt="" />
+    <article className='product'>
+      <header className='product__header' onClick={handleSelectProduct}>
+        <img className='header__img image1' src={product.images[0].url} alt={product.title} />
+        <img className='header__img image2' src={product.images[1].url} alt={product.title} />
       </header>
       <section className='product__body'>
-        <div className='product__section'>
-          <h5 className='product__subtitle'>{product.brand}</h5>
-          <h4 className='product__title'>{product.title}</h4>
+        <div className='product__name'>
+          <span className='product__name--brand'>{product.brand}</span>
+          <h4 className='product__name--title' onClick={handleSelectProduct}>{product.title}</h4>
         </div>
         <div className='product__price'>
           <span className='product__price--label'>Price</span>
-          <span className='product__price--value'>{product.price}</span>
+          <h4 className='product__price--value'>{product.price}</h4>
         </div>
-        <button onClick={handleBtnClick} className='product__btn'>
+        <button className='product__btn--addTocart' onClick={handleBtnClick} >
           <i className='bx bxs-cart product__btn--icon' ></i>
         </button>
       </section>
