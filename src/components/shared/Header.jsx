@@ -16,24 +16,24 @@ const Header = () => {
 
   return (
     <header className='header'>
-      <h1><Link onClick={handleFalseNavbar} className='header__home' to='/'>e-commerce</Link></h1>
-      <nav className='navbar'>
-        <ul className={`navbar__container ${navbar ? 'open' : ''}`} >
+      <h1><Link className='header__home' to='/' onClick={handleFalseNavbar} >e-commerce</Link></h1>
+      <nav className={`navbar__container ${navbar ? 'open' : ''}`}>
+        <ul className= 'navbar'>
           <li className='navbar__list'>
-            <Link onClick={handleFalseNavbar} className='navbar__login' to='/login'>
+            <Link className='navbar__login' to='/login' onClick={handleFalseNavbar} >
               <i className='bx bx-lock-open-alt' ></i>Login</Link>
           </li>
           <li className='navbar__list'>
-            <Link onClick={handleFalseNavbar} className='navbar__register' to='/register'>
+            <Link className='navbar__register' to='/register' onClick={handleFalseNavbar} >
               <i className='bx bxs-edit' ></i>Register</Link>
           </li>
           <li className='navbar__list'>
-            <Link onClick={handleFalseNavbar} className='navbar__purchases' to='/purchases'>
+            <Link className='navbar__purchases' to='/purchases' onClick={handleFalseNavbar} >
               <i className='bx bx-shopping-bag' ></i>Purchases</Link>
           </li>
           <li className='navbar__list'>
-            <Link onClick={handleFalseNavbar} className='navbar__cart' to='/cart'>
-              <i className='bx bxs-cart' ></i>Cart</Link>
+            <Link className='navbar__cart' to='/cart' onClick={handleFalseNavbar} >
+              <i className='bx bx-cart' ></i>Cart</Link>
           </li>
         </ul>
       </nav>
