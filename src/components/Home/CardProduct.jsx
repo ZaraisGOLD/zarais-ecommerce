@@ -7,7 +7,9 @@ const CardProduct = ({ product }) => {
 
   const navigate = useNavigate()
 
-  const { createProducttoCart } = useCrudCart()
+  const { addProductToCart } = useCrudCart()
+
+  const token = localStorage.getItem('token')
 
   const handleSelectProduct = () => {
     navigate(`/product/${product.id}`)
@@ -15,11 +17,15 @@ const CardProduct = ({ product }) => {
 
   const handleBtnClick = e => {
     e.stopPropagation()
+    if(token){
     const data = {
       quantity: 1,
       productId: product.id
     }
-    createProducttoCart(data)
+      addProductToCart(data)
+    }else{
+      navigate('/login')
+    }
   }
 
   return (
