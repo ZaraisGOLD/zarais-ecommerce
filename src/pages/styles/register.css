@@ -40,10 +40,12 @@
 }
 
 .register__input {
+    color: var(--colorLabel);
     height: 2.5em;
     border: 0.5px solid var(--colorBorderInput);
     border-radius: 0.25em;
     margin-bottom: 1em;
+    text-indent: 0.5em;
 }
 
 /* .login__req {
