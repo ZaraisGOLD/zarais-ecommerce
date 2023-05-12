@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     padding-top: calc(var(--heightHeader) + 2em);
-    padding-bottom: calc(var(--heightHeader) + 15em);
+    padding-bottom: calc(var(--heightHeader) + 10em);
     color: var(--colorLabel);
 }
 
@@ -46,5 +46,32 @@
     margin-bottom: 1em;
 }
 .login__btn {
-    
+    background-color: var(--colorPrimary);
+    color: var(--colorBtnText);
+    padding: 0.8em 1.4em;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-radius: 0.25em;
+    margin: 0.5em;
+}
+
+.login__register {
+    display: flex;
+    gap: 1em;
+}
+
+.login__span {
+    padding: 1em 0;
+}
+
+.login__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+    color: var(--colorPrimary) ;
+}
+
+.login .bxs-edit {
+    font-size: 1.4em;
 }

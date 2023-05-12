@@ -32,8 +32,10 @@ const Login = () => {
           <input className='login__input' type="password" id='password' />
         </div>
         <button className='login__btn'>Login</button>
-        <span>Don't have an account?</span>
-        <Link to='/register'><i className='bx bxs-edit' ></i>Sign up</Link>
+        <div className='login__register'>
+          <span className='login__span'>Don't have an account?</span>
+          <Link className='login__link' to='/register'><i className='bx bxs-edit' ></i>Sign up</Link>
+        </div>
       </form>
     </div>
   )
