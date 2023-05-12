@@ -1,0 +1,48 @@
+.purchases__container {
+    display: grid;
+    grid-template-columns: 5em 50% auto;
+    gap: 1em;
+    padding-top: 1em;
+}
+
+.purchases__imgContainer {
+    background-color: transparent;
+    width: 100%;
+    aspect-ratio: 1.6;
+    position: relative;
+}
+
+.purchases__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.purchases__productName {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.purchases__data {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4em;
+}
+
+.purchases__quantity,
+.purchases__subtotal {
+    font-size: 0.8rem;
+}
+
+.purchases__value {
+    font-weight: 600;
+}

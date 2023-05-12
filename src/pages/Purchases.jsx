@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import usePurchases from '../hooks/usePurchases'
 import { ProductPurchase } from '../components/Purchases/ProductPurchase'
+import './styles/purchases.css'
 
 const Purchases = () => {
 
@@ -10,10 +11,9 @@ const Purchases = () => {
     getPurchased()
   }, [])
 
-
   return (
-    <div>
-      <h2>Purchases</h2>
+    <div className='purchases'>
+      <h2 className='purchases__title'>Purchases</h2>
       {
         purchases?.map(prodPurchased => (
           <ProductPurchase

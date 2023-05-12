@@ -1,0 +1,14 @@
+.purchases {
+    padding: 3em;
+    color: var(--colorLabel);
+    width: 100%;
+    min-width: 400px;
+    max-width: 1500px;
+    display: grid;
+    justify-content: center;
+}
+
+.purchases__title {
+    text-align: center;
+    padding-bottom: 1em;
+}
