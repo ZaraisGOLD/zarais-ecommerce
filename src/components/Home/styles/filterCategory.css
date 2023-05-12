@@ -22,6 +22,6 @@
 
 .list__allProducts:hover,
 .list__options:hover {
-    background-color: var(--colorPrimary);
+    background-color: var(--colorBorderCardProduct);
     color: var(--colorwhiteText);
 }

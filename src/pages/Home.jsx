@@ -13,6 +13,8 @@ const Home = () => {
     to: Infinity
   })
 
+  const [openFilters, setOpenFilters] = useState(false)
+
   const { productsGlobal } = useSelector(state => state)
 
   const input = useRef()
@@ -38,9 +40,17 @@ const Home = () => {
         return to >= price
       }
       if (!from && !to) {
-        true
+        return true
       }
     })
+
+    const handleOpenFilters = () => {
+      setOpenFilters(!openFilters)
+    }
+    
+    const handleClosedFilters = () => {
+      setOpenFilters(false)
+    }
 
   return (
     <section className='home'>
@@ -49,16 +59,17 @@ const Home = () => {
         <button className='form__btn' ><i className='bx bx-search'></i></button>
       </form>
       <button className='home__filter--btn'>
-        <i className='bx bx-filter-alt' ></i>
-        <span className='filter__btn--text'>Filter products</span>
+        <i className='bx bx-filter-alt'></i>
+        <span className='filter__btn--text' onClick={handleOpenFilters}>Filter products</span>
       </button>
-      <section className='home__filters--Container'>
+      <section className={`home__filters--Container ${openFilters ? 'filters__show' : ''}`}>
         <button className='filters__btn--closed'>
-          <i className='bx bx-x btn__closed--icon'></i>
+          <i className='bx bx-x btn__closed--icon' onClick={handleClosedFilters}></i>
         </button>
-        <FilterCategory />
+        <FilterCategory setOpenFilters={setOpenFilters}/>
         <FilterPrice
           setFromTo={setFromTo}
+          setOpenFilters={setOpenFilters}
         />
       </section>
       <section className='home__cardProduct--container'>

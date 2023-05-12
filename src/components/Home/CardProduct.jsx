@@ -38,7 +38,7 @@ const CardProduct = ({ product }) => {
           <h4 className='product__price--value'>{product.price}</h4>
         </div>
         <button className='product__btn--addTocart' onClick={handleBtnClick} >
-        <i class='bx bxs-cart-add' ></i>
+        <i className='bx bxs-cart-add product__btn--icon' ></i>
         </button>
       </section>
     </article>

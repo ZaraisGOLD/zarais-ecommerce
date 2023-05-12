@@ -20,17 +20,14 @@
 
 .input__value{
     padding: .3em;
+    border: 1px solid var(--colorPrimary);
 }
 
 .firterPrice__form--btn{
     padding: .3em;
     border-style: none;
-    border: 1px solid;
     border-radius: 3px;
-}
-
-.firterPrice__form--btn:hover{
+    border: 1px solid var(--colorPrimary);
     background-color: var(--colorPrimary);
-    border-color: var(--colorPrimary);
     color: var(--colorwhiteText);
 }
