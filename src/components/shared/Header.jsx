@@ -10,25 +10,29 @@ const Header = () => {
     setNavbar(!navbar)
   }
 
+  const handleFalseNavbar = () => {
+    setNavbar(false)
+  }
+
   return (
     <header className='header'>
-      <h1><Link className='header__home' to='/'>e-commerce</Link></h1>
+      <h1><Link onClick={handleFalseNavbar} className='header__home' to='/'>e-commerce</Link></h1>
       <nav className='navbar'>
         <ul className={`navbar__container ${navbar ? 'open' : ''}`} >
           <li className='navbar__list'>
-            <Link className='navbar__login' to='/login'>
+            <Link onClick={handleFalseNavbar} className='navbar__login' to='/login'>
               <i className='bx bx-lock-open-alt' ></i>Login</Link>
           </li>
           <li className='navbar__list'>
-            <Link className='navbar__register' to='/register'>
+            <Link onClick={handleFalseNavbar} className='navbar__register' to='/register'>
               <i className='bx bxs-edit' ></i>Register</Link>
           </li>
           <li className='navbar__list'>
-            <Link className='navbar__purchases' to='/purchases'>
+            <Link onClick={handleFalseNavbar} className='navbar__purchases' to='/purchases'>
               <i className='bx bx-shopping-bag' ></i>Purchases</Link>
           </li>
           <li className='navbar__list'>
-            <Link className='navbar__cart' to='/cart'>
+            <Link onClick={handleFalseNavbar} className='navbar__cart' to='/cart'>
               <i className='bx bxs-cart' ></i>Cart</Link>
           </li>
         </ul>

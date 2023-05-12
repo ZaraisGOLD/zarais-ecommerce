@@ -3,6 +3,7 @@
 :root {
   /* ajusta los colores como te guste */
   --colorPrimary: #f85555;
+  --colorBorderInput: #f8555570;
   --colorBtnText: #ffffff;
   --colorwhiteText: #ffffff;
   --text-gray: #c7c7c7;
@@ -12,6 +13,7 @@
   --heightHeader: 6em;
   --bgPrimary: radial-gradient(circle, rgba(255, 243, 243, 1) 0%, rgba(255, 243, 243, 1) 100%);
   --bgWhite: #f6f6f6;
+  --colorLabel: #515151;
 }
 
 *,
@@ -26,6 +28,7 @@ html {
 }
 
 html ::-webkit-scrollbar {
+  height: 7px;
   width: 7px;
 }
 

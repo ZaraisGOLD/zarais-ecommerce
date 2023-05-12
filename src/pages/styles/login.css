@@ -1,5 +1,50 @@
-.login{
+.login {
+    width: 100%;
+    height: calc(100vh - var(--heightHeader));
+    display: flex;
+    justify-content: center;
+    padding-top: calc(var(--heightHeader) + 2em);
+    padding-bottom: calc(var(--heightHeader) + 15em);
+    color: var(--colorLabel);
+}
+
+.login__container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 0.5em;
+    padding: 0 8em;
+}
+
+.login__title {
+    font-size: 1.8rem;
+}
+
+.login__subtitle {
+    font-size: 1.1rem;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.login__email,
+.login__password {
+    width: 100%;
+    display: grid;
+}
+
+.login__label {
+    display: grid;
+    gap: 1em;
+    padding-bottom: 0.3em;
+}
+
+.login__input {
+    height: 2.5em;
+    border: 0.5px solid var(--colorBorderInput);
+    border-radius: 0.25em;
+    margin-bottom: 1em;
+}
+.login__btn {
+    
 }
