@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
 import useCrudCart from '../../hooks/useCrudCart'
 import './styles/productIdInfo.css'
+import { useNavigate } from 'react-router-dom'
 
 const ProductIdInfo = ({ product }) => {
 
   const [quantity, setQuantity] = useState(1)
-  const { createProducttoCart } = useCrudCart()
+  const { addProductToCart } = useCrudCart()
 
   const handlePlus = () => setQuantity(quantity + 1)
+
+  const token = localStorage.getItem('token')
+
+  const navigate = useNavigate()
 
   const handleMinus = () => {
     if (quantity - 1 >= 1) {
@@ -16,12 +21,15 @@ const ProductIdInfo = ({ product }) => {
   }
 
   const handleAddToCart = () => {
-    const data = {
-      quantity,
-      productId: product.id
+    if(token){
+      const data = {
+        quantity,
+        productId: product.id
+      }
+      addProductToCart(data)
+    }else{
+      navigate('/login')
     }
-
-    createProducttoCart(data)
   }
 
   return (
@@ -50,8 +58,8 @@ const ProductIdInfo = ({ product }) => {
               </div>
             </div>
           </div>
-          <button className='productIdInfo__btn--addToCart'>
-            Add to cart <i onClick={handleAddToCart} className='bx bx-cart btn__icon--cart'></i>
+          <button className='productIdInfo__btn--addToCart' onClick={handleAddToCart}>
+            Add to cart <i  className='bx bx-cart btn__icon--cart'></i>
           </button>
         </section>
         <p className='productIdinfo__body--description'>{product?.description}</p>

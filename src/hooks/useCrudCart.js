@@ -7,7 +7,7 @@ const useCrudCart = () => {
 
   const dispatch = useDispatch()
 
-  const createProducttoCart = data => {
+  const addProductToCart = data => {
 
     const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'
 
@@ -41,7 +41,7 @@ const useCrudCart = () => {
       .catch(err => console.log(err))
   }
 
-  return { createProducttoCart, deleteProductFromCart, updateProductInCart }
+  return { addProductToCart, deleteProductFromCart, updateProductInCart }
 
 }
 
