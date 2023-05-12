@@ -10,14 +10,17 @@
 .home__form {
   display: flex;
   flex-direction: row;
-  max-width: 900px;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
 }
 
 .form__input {
-  flex: 1;
+  flex-direction: row;
   padding-left: 1em;
   height: 40px;
-  border-color: inherit;
+  width: calc(100% - 40px);
+  border-color: var(--colorBorderInput);
 }
 
 .form__btn {
@@ -28,10 +31,11 @@
 }
 
 .home__filter--btn {
-  width: fit-content;
+  width: 90%;
+  max-width: 600px;
   display: flex;
   align-items: center;
-  justify-self: end;
+  justify-content: end;
   gap: .5em;
   color: var(--text-dark-gray);
   border: none;
@@ -43,16 +47,22 @@
 }
 
 .home__filters--Container {
-  background-color: white;
-  width: 70%;
+  background-color: var(--bgWhite);
+  border-bottom: 1px solid var(--colorPrimary);
+  border-left: 1px solid var(--colorPrimary);
+  border-bottom-left-radius: 20px;
+  width: 250px;
   display: grid;
   gap: .7em;
   padding: 1em;
   position: fixed;
   top: 0;
-  right: 0;
-  right: -70%;
+  right: -250px;
   z-index: 1;
+}
+
+.filters__show {
+  right: 0;
 }
 
 .filters__btn--closed {

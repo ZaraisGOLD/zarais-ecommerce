@@ -34,7 +34,6 @@
 .slider__btn {
     width: 1.5em;
     aspect-ratio: 1;
-    /* position: absolute; */
     background-color: var(--colorPrimary);
     color: white;
     border-radius: 50%;

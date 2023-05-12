@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import './styles/filterPrice.css'
 
-const FilterPrice = ({ setFromTo }) => {
+const FilterPrice = ({ setFromTo, setOpenFilters }) => {
 
   const { register, handleSubmit, reset } = useForm()
 
@@ -12,6 +12,7 @@ const FilterPrice = ({ setFromTo }) => {
       from : '',
       to: ''
     })
+    setOpenFilters(false)
   }
 
   return (

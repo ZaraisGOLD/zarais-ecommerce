@@ -4,7 +4,7 @@ import { getAllProductsThunk } from '../../store/slices/products-slice'
 import { useDispatch } from 'react-redux'
 import './styles/filterCategory.css'
 
-const FilterCategory = () => {
+const FilterCategory = ({setOpenFilters}) => {
 
   const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/categories'
 
@@ -19,10 +19,12 @@ const FilterCategory = () => {
   const handleCategories = id => {
     const url = `https://e-commerce-api-v2.academlo.tech/api/v1/products?categoryId=${id}`
     dispatch(getAllProductsThunk(url))
+    setOpenFilters(false)
   }
 
   const handleAllProducts = () => {
     dispatch(getAllProductsThunk())
+    setOpenFilters(false)
   }
 
   return (
