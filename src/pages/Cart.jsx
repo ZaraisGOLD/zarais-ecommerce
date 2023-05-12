@@ -4,12 +4,13 @@ import { getAllProductsCartThunk } from '../store/slices/cart-slice'
 import ProductInCart from '../components/Cart/ProductInCart'
 import usePurchases from '../hooks/usePurchases'
 import './styles/cart.css'
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
 
   const { postPurchases } = usePurchases()
-
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   useEffect(() => {
     dispatch(getAllProductsCartThunk())
@@ -21,6 +22,7 @@ const Cart = () => {
 
   const handlePurchased = () => {
     postPurchases()
+    navigate('/purchases')
   }
 
   return (

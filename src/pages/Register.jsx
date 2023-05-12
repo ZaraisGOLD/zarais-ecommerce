@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import useAuthentication from '../hooks/useAuthentication'
 import defaultRegisterValues from '../utils/defaultRegisterValues'
@@ -7,7 +7,6 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const Register = () => {
 
-  const [msg, setMsg] = useState(false)
   const { register, handleSubmit, reset } = useForm()
   const navigate = useNavigate()
 
@@ -16,7 +15,7 @@ const Register = () => {
   const submit = data => {
     createNewUser(data)
     reset(defaultRegisterValues)
-    navigate('/')
+    navigate('/login')
   }
 
   return (

@@ -1,10 +1,11 @@
 import React from 'react'
 import useAuthentication from '../hooks/useAuthentication'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './styles/login.css'
 
 const Login = () => {
 
+  const navigate = useNavigate()
   const { loginUser } = useAuthentication()
 
   const handleSubmit = e => {
@@ -12,10 +13,10 @@ const Login = () => {
 
     const email = e.target.email.value
     const password = e.target.password.value
-
     const data = { email, password }
 
     loginUser(data)
+    navigate('/')
   }
 
   return (

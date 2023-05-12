@@ -48,10 +48,6 @@
     text-indent: 0.5em;
 }
 
-/* .login__req {
-    font-size: 0.8rem;
-} */
-
 .register__btn {
     background-color: var(--colorPrimary);
     color: var(--colorBtnText);
