@@ -3,17 +3,16 @@
     display: flex;
     justify-content: center;
     padding-top: calc(var(--heightHeader)*2 + 2em);
-    padding-bottom: calc(var(--heightHeader) + 10em);
     color: var(--colorLabel);
 }
 
 .login__container {
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.5em;
-    padding: 0 8em;
 }
 
 .login__title {

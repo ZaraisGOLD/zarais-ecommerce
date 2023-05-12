@@ -12,17 +12,17 @@ const Purchases = () => {
   }, [])
 
   return (
-    <div className='purchases'>
-      <h2 className='purchases__title'>Purchases</h2>
-      {
-        purchases?.map(prodPurchased => (
-          <ProductPurchase
-            key={prodPurchased.id}
-            prodPurchased={prodPurchased}
-          />
-        ))
-      }
-    </div>
+    <article className='purchases__container'>
+        <h2 className='purchases__title'>Purchases</h2>
+        {
+          purchases?.map(prodPurchased => (
+            <ProductPurchase
+              key={prodPurchased.id}
+              prodPurchased={prodPurchased}
+            />
+          ))
+        }
+    </article>
   )
 }
 
