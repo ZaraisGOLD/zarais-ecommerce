@@ -1,6 +1,5 @@
 .login {
     width: 100%;
-    height: calc(100vh - var(--heightHeader));
     display: flex;
     justify-content: center;
     padding-top: calc(var(--heightHeader) + 2em);
@@ -19,6 +18,7 @@
 
 .login__title {
     font-size: 1.8rem;
+    padding-bottom: 0.5em;
 }
 
 .login__subtitle {
@@ -45,6 +45,7 @@
     border-radius: 0.25em;
     margin-bottom: 1em;
 }
+
 .login__btn {
     background-color: var(--colorPrimary);
     color: var(--colorBtnText);
@@ -57,19 +58,21 @@
 
 .login__register {
     display: flex;
-    gap: 1em;
+    flex-direction: column;
 }
 
 .login__span {
+    text-align: center;
     padding: 1em 0;
 }
 
 .login__link {
+    width: 270px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.25em;
-    color: var(--colorPrimary) ;
+    color: var(--colorPrimary);
 }
 
 .login .bxs-edit {

@@ -2,6 +2,8 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import useAuthentication from '../hooks/useAuthentication'
 import defaultRegisterValues from '../utils/defaultRegisterValues'
+import './styles/register.css'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
 
@@ -15,30 +17,37 @@ const Register = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
-      <h2>Create a new user</h2>
-      <div>
-        <label htmlFor="firstName">First Name</label>
-        <input {...register('firstName')} type="text" id='firstName' />
-      </div>
-      <div>
-        <label htmlFor="lastName">Last Name</label>
-        <input {...register('lastName')} type="text" id='lastName' />
-      </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input {...register('email')} type="email" id='email' />
-      </div>
-      <div>
-        <label htmlFor="password">Password</label>
-        <input {...register('password')} type="password" id='password' />
-      </div>
-      <div>
-        <label htmlFor="phone">Phone</label>
-        <input {...register('phone')} type="tel" id='phone' />
-      </div>
-      <button>Register</button>
-    </form>
+    <div className='register'>
+      <form className='register__container' onSubmit={handleSubmit(submit)}>
+        <h2 className='register__title'>Create account</h2>
+        <div className='register__firstName'>
+          <label className='register__label' htmlFor="firstName">First Name</label>
+          <input className='register__input' {...register('firstName')} type="text" id='firstName' />
+        </div>
+        <div className='register__lastName'>
+          <label className='register__label' htmlFor="lastName">Last Name</label>
+          <input className='register__input' {...register('lastName')} type="text" id='lastName' />
+        </div>
+        <div className='register__email'>
+          <label className='register__label' htmlFor="email">Email</label>
+          <input className='register__input' {...register('email')} type="email" id='email' />
+        </div>
+        <div className='register__password'>
+          <label className='register__label' htmlFor="password">Password</label>
+          <input className='register__input' {...register('password')} type="password" id='password' />
+          {/* <p className='login__req'><span>i</span>Password must be at least 6 characters.</p> */}
+        </div>
+        <div className='register__phone'>
+          <label className='register__label' htmlFor="phone">Phone</label>
+          <input className='register__input' {...register('phone')} type="tel" id='phone' />
+        </div>
+        <button className='register__btn'>Register</button>
+        <div className='register__login'>
+          <span className='register__span'>Already have an account?</span>
+          <Link className='register__link' to='/login'><i className='bx bx-lock-open-alt' ></i>Sign in</Link>
+        </div>
+      </form>
+    </div>
   )
 }
 
