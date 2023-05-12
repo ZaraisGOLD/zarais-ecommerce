@@ -92,7 +92,7 @@ select::-ms-expand {
 img {
   width: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center, center;
   user-select: none;
 }
