@@ -2,7 +2,8 @@
   width: 100%;
   display: grid;
   justify-content: center;
-  padding: 2em 1.5em;
+  align-items: center;
+  padding: calc(var(--heightHeader) + 2em) 1.5em 2em 1.5em;
   gap: 1em;
   position: relative;
 }
@@ -86,3 +87,30 @@
   justify-content: center;
   gap: 1em;
 }
+
+@media (min-width: 800px) {
+  .home{
+    padding-left: calc(250px + 1.5em);
+  }
+  .home__filter--btn{
+    display: none;
+  }
+  
+  .home__filters--Container{
+    position: fixed;
+    top: var(--heightHeader);
+    border-bottom-left-radius: initial;
+    border-bottom: initial;
+    border-left: initial;
+    border-right: 1px solid var(--colorPrimary);
+    left: 0;
+    height: calc(100vh - var(--heightHeader));
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+  }
+  .filters__btn--closed{
+    display: none;
+  }
+
+  }

@@ -1,13 +1,11 @@
 .cart {
-    padding: 3em;
-    color: var(--colorLabel);
-    min-width: 400px;
+    padding-top: calc(var(--heightHeader) + 2em);
 }
 
 
 .cart__title {
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
 }
 
 .cart__container {
@@ -26,19 +24,16 @@
     margin-left: auto;
     margin-right: auto;
     gap: 1em;
-    border-top: 1px solid var(--colorBorderCardProduct);
-    padding-top: 1em;
 }
 
 .cart__total--label {
     justify-self: end;
-    align-self: center;
+    align-self: end;
     font-weight: 300;
 }
 
 .cart__total--value {
-    align-self: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .cart__total--value::before {
@@ -47,12 +42,12 @@
 }
 
 .cart__btn {
-    min-width: max-content;
-    font-size: 1.2rem;
-    padding: 0.5em 1em;
-    margin: 0 5em;
-    background-color: var(--colorPrimary);
-    color: var(--colorBtnText);
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0.6em;
+    text-align: center;
+    background-color: lightcoral;
+    color: white;
     border-radius: 0.4em;
     grid-column: span 2;
 }

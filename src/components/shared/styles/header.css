@@ -14,6 +14,7 @@
   height: var(--heightHeader);
   z-index: 1;
   border-bottom: 0.1em solid var(--colorPrimary);
+  position: fixed;
 }
 
 .header__home {

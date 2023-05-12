@@ -1,5 +1,5 @@
 .purchases {
-    padding: 3em;
+    padding: calc(var(--heightHeader) + 3em) 3em 3em 3em;
     color: var(--colorLabel);
     width: 100%;
     min-width: 400px;
