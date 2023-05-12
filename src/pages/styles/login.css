@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: calc(var(--heightHeader) + 2em);
+    padding-top: calc(var(--heightHeader)*2 + 2em);
     padding-bottom: calc(var(--heightHeader) + 10em);
     color: var(--colorLabel);
 }

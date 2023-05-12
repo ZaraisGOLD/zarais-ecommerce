@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: calc(var(--heightHeader));
+    padding-top: calc(var(--heightHeader)*2);
     color: var(--colorLabel);
 }
 
@@ -47,6 +47,10 @@
     margin-bottom: 1em;
     text-indent: 0.5em;
 }
+
+/* .login__req {
+    font-size: 0.8rem;
+} */
 
 .register__btn {
     background-color: var(--colorPrimary);
